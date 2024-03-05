@@ -1,1 +1,1 @@
-# Telerielvamento-GeoEcologico-2024
+# Telerilevamento-GeoEcologico-2024
