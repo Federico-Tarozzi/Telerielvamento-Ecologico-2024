@@ -17,5 +17,7 @@ library(devtools)
 
 # install the imageRy package from GitHub
 devtools::install_github("ducciorocchini/imageRy")
+#or simply
+install_github("ducciorocchini/imageRy")
 
 library(imageRy)
