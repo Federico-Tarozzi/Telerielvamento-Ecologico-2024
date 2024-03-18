@@ -91,4 +91,7 @@ im.plotRGB(stacksent, 4, 3, 1)
 im.plotRGB(stacksent, 3, 4, 2)
 im.plotRGB(stacksent, 3, 2, 4)
 
+# mi crea un grafico di correlazione tra le bande
+pairs(stacksent)
+# le bande del visibile sono ampiamente correlate tra loro, mentre il vicino infrarosso meno
 
