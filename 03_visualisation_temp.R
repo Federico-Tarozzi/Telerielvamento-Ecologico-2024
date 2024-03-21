@@ -67,7 +67,7 @@ plot(stacksent, col=cl)
 im.plotRGB(stacksent, 3, 2, 1)
 im.plotRGB(stacksent, 4, 2, 1)
 # 432 chiamato anche falso colore, si visualizza il vicino infrarosso come rosso. 
-im.plotRGB(stacksent, 4, 3, 2)
+im.plotRGB(stacksent, 4, 3, 1)
 
 # multiframe
 # aggiungiamo due 1 righa e 2 colonne per visualizzare le due immagini prodotte, a sinistra colori naturali, a destra con il vicino infrarosso
