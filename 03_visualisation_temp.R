@@ -50,7 +50,7 @@ plot(b4, col=cl)
 plot(b8, col=cl)
 
 # stack images
-# mettere insime le bande in un unico stack
+# mettere insime le bande in un unico stack, questo rappresenta un modo alternativo per creare un multiframe. 
 stacksent <- c(b2, b3, b4, b8)
 dev.off() # it closes devices
 plot(stacksent, col=cl)
@@ -63,10 +63,11 @@ plot(stacksent, col=cl)
 # band8 nir element b8, stacksent[[4]]
 
 #im.plotRGB(stacksent, r=3, g=2, b=1)
+# 321 visualizzo a colori naturali 
 im.plotRGB(stacksent, 3, 2, 1)
 im.plotRGB(stacksent, 4, 2, 1)
 # 432 chiamato anche falso colore, si visualizza il vicino infrarosso come rosso. 
-im.plotRGB(stacksent, 4, 3, 1)
+im.plotRGB(stacksent, 4, 3, 2)
 
 # multiframe
 # aggiungiamo due 1 righa e 2 colonne per visualizzare le due immagini prodotte, a sinistra colori naturali, a destra con il vicino infrarosso
