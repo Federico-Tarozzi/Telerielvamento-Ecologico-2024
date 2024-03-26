@@ -8,8 +8,9 @@ a + b
 # Arrays
 
 flowers <- c(3, 6, 8, 10 , 15, 18)
-
 insects <- c(10, 16, 25, 42, 61, 73)
+
+# plot 
 
 plot(flowers, insects)
 #changing plot parameters
