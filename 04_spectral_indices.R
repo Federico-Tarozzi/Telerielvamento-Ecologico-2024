@@ -55,7 +55,7 @@ im.plotRGB(m2006, 2, 3, 1) # nir on B 2006
 
 # Calculating the DVI _difference vegetation index_
 
-# Se metto uguale in R è perché sto facendo una vera e propria operazione matematica 
+# Se metto uguale (=) in R è perché sto facendo una vera e propria operazione matematica 
 # faccio la differenza del pixcel a infra - il pixcel a rosso = pixcel DVI
 # valore massimo di DVI=255 ___ valore minimo di DVI=-255
 # è in funzione di 2^8 ovvero 256 pixcel --> è DUNQUE STRETTAMENTE LEGATA ALLA RISOLUZIONE IN BIT DELL'IMMAGINE. 
@@ -84,6 +84,8 @@ plot(dvi2006, col=cl)
 
 
 # NDVI -- NORMALIZED VEGETATION INDEX
+# prendo il dvi al numeratore e al denominatore ci metto la somma tra la banda niv e red della rispettiva immagine 
+# è come scrivere ES: ndvi1992 =  m1992[[1]] - m1992[[2]] / (m1992[[1]] + m1992[[2]])
 ndvi1992 = dvi1992 / (m1992[[1]] + m1992[[2]])
 ndvi2006 = dvi2006 / (m2006[[1]] + m2006[[2]])
 
