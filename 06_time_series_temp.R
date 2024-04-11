@@ -25,3 +25,51 @@ cl <- colorRampPalette(c("blue", "white", "red")) (100)
 plot(difEN, col=cl)
 
 # partendo da una immagine a 8 bit abbiamo una fascia da -255 a 255 e possiamo quantificare 
+
+#-----------------------------------------------------------------------------------------------------------------------
+
+# ice melt in greenland
+# lavoriamo con un proxy del programma copernicus
+
+# import images 16 bit oltre 65'000 pixcel 
+# dati di temperatura della groenlandia 
+# esistono formule online per andare a convertire i dati in bit in dati di temperatura in gradi. 
+g2000 <- im.import("greenland.2000.tif")
+g2005 <- im.import("greenland.2005.tif")
+g2010 <- im.import("greenland.2010.tif")
+g2015 <- im.import("greenland.2015.tif")
+
+# create a colour palette
+clg <- colorRampPalette(c("black", "blue", "white", "red")) (100)
+plot(g2000, col=clg)
+
+par(mfrow=c(1,2))
+plot(g2000, col=clg)
+plot(g2015, col=clg)
+
+par(mfrow=c(2,2))
+plot(g2000, col=clg)
+plot(g2005, col=clg)
+plot(g2010, col=clg)
+plot(g2015, col=clg)
+
+# stack 4 bande di una immagine 
+greenland <- c(g2000, g2005, g2010, g2015)
+plot(greenland, col=clg)
+
+# differenza tra immagine 2000 e immagine 2015
+
+difg= greenland[[1]] - greenland[[4]] # preso la prima e la quarta banda dello stack che ho precedentemente chiamato greenland. 
+clinvert <- colorRampPalette(c("red", "white", "blue")) (100)
+plot(difg, col=clinvert) # nell'entroterra i valori negativi indicano che la temperatura è aumentata
+
+
+
+im.plotRGB(greenland, r=1, g=2, b=4) #g200o on red, g2005 on green, g2010 on blue
+
+
+
+
+
+
+
