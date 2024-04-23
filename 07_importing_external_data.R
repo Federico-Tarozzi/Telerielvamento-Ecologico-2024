@@ -50,4 +50,19 @@ plot(flood)
 plot(flood2)
 
 
+# scarico i dati da copernicus
+setwd("C:/Users/chicc/OneDrive/Desktop/Università/MAGISTRALE - GEOGRAFIA E PROCESSI TERRITORIALI/SECONDO SEMESTRE/TELERILEVAMENTO ECOLOGICO/SCARICARE DATI PROVA")
+soil <- rast("c_gls_SSM1km_202404210000_CEURO_S1CSAR_V1.2.1.nc")
+plot(soil)
+plot(soil[[1]])
+
+# RITAGLIAARE UN'IMMAGINE
+# definire un estensione con minimi e massimi di X e Y
+ext <- c(25, 30, 55, 58) # mi baso sui dati delle che compaiono nelle ascisse e nelle ordinete del plot per visualizzare una parte ridotta dell'immagine TRA PARENTESI SI CONO LE COORDIATE GEOGRAFICHE
+soilcrop <- crop(soil, ext)
+plot(soilcrop)
+plot(soilcrop[[1]]) # visualizzo il ritaglio con senza l'errore
+
+
+
 
