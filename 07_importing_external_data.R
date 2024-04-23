@@ -24,3 +24,27 @@ eclissi # visualizzo le informazoni relative all'immagine
 
 im.plotRGB(eclissi, 1, 2, 3)
 im.plotRGB(eclissi, 2, 3, 1) # possimao giocare con le visualizzazioni cambiando le bande
+
+# si possono fare cose...
+dif <- eclissi[[1]] - eclissi[[2]] # in questo caso non ha molto senso perchè non ci sono bande particolarmente interessanti ma è per mostrare cosa si può fare
+plot(dif)
+
+# METODO PER SALVARE UNA QUALSIASI IMMAGINE E IMPORTARLA TRAMITE LA FUNZIONE RAST PER ANDARE A LAVORARCI
+
+# importiamo un'altra immagine da https://earthobservatory.nasa.gov/
+# mostro la cartella dalla quale prendo l'immagine attraverso setwd
+
+setwd("C:/Users/chicc/OneDrive/Desktop/Università/MAGISTRALE - GEOGRAFIA E PROCESSI TERRITORIALI/SECONDO SEMESTRE/TELERILEVAMENTO ECOLOGICO/SCARICARE DATI PROVA")
+
+# assegno un nome alla funzione e utilizzo la funzione "rast" per importare l'immagine con il nome con la quale l'ho salvata
+
+flood <- rast("prima floods.jpg")
+# plotto il risultato
+im.plotRGB(flood, 1, 2, 3)
+#carico un'altra immagine 
+flood2 <- rast("uralriver_flood_oli2_20240413_lrg.jpg")
+# visualizzo entrambe le immagini con un par
+par(mfrow=c(1,2))
+plot(flood)
+plot(flood2)
+
