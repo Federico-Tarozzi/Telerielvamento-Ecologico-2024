@@ -33,6 +33,7 @@ plot(dif)
 
 # importiamo un'altra immagine da https://earthobservatory.nasa.gov/
 # mostro la cartella dalla quale prendo l'immagine attraverso setwd
+# NB: ANCORA UN VOLTA QUANDO USO serwd PER RICHIAMARE LA CARTELLA DENTRO CUI è CONTENUTA L'IMMAGINE, DEVO INVERTIRE \ IN /
 
 setwd("C:/Users/chicc/OneDrive/Desktop/Università/MAGISTRALE - GEOGRAFIA E PROCESSI TERRITORIALI/SECONDO SEMESTRE/TELERILEVAMENTO ECOLOGICO/SCARICARE DATI PROVA")
 
