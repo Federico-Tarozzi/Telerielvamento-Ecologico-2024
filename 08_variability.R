@@ -38,4 +38,19 @@ sd3 <- focal(nir, matrix(1/9, 3, 3), fun=sd)
 plot(sd3)
 
 # cambiamo la palette di colore della visualizzazione con viridis in modo da utilizzare dei colori visibili anche da persone affette da daltonismo
+# usiamo la palette all'interno del pacchetto che si chiama viridis, 7 di una serie di palette, e 256 riguarda il range di sfumature
+
+viridisc <- colorRampPalette(viridis(7))(256)
+plot(sd3, col=viridisc)
+# evidenzia la più alta variabilità geomorfologica 
+
+# utilizziamo una finestra con un maggiore numero di pixcel della matrice. la deviazione standard cala rispetto al calcolo con la matrice più piccola.
+sd7 <- focal(nir, matrix(1/49, 7, 7), fun=sd)
+plot(sd7, col=viridisc)
+
+sdstack <- c(sd3, sd7)
+plot(sdstack, col=viridisc)
+# finestre di calcolo più grande mostrano una similarità nella distrubuzione della deviazione standard relativamente all'immagine. dipende dal numero di pixcel
+
+
 
