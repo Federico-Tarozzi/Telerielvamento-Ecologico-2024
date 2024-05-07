@@ -1,1 +1,56 @@
+\documentclass[12pt]{article} % indica il template di base e il tipo di documento
+% [12pt] mi mette 12 invece il 10 di default 
+\usepackage{graphicx} % Required for inserting images
+% carico pacchetti utili con usepackage
+\usepackage{hyperref} %ogni singolo titolo è collegato quindi dall'introduzione io clicco la sezione e mi riporta automaticamente dove lo trovo nel testo
+\title{My first LaTeX doc}
+\author{Federico Tarozzi}
+% 3 modi per scrivere la data: aggiungo manualmente, elimino il testo tra parentesi e elimino la data, tolgo direttamente la funzione mettendola in commento % o eliminandola direttamente. 
+\date{7 May 2024}
+
+% ricompilare passare da uno script alla modifica del documento che si salva automaticamente 
+
+\begin{document} % funzione per inizare, l'argomento ci indica cosa inizia. in questo caso document
+% ogni volta che apro un \bigin ci deve essere anche un \end
+
+\maketitle % prende i pezzi scritti sopra e li mette all'inizio del documento come titolo. 
+\tableofcontents %prende tutte le sezioni e le mette in fila
+
+\section{Introduction} %aggiungendo * posso eliminare il numero prima della sezione
+\label{sec:intro}
+Ray Charles Robinson (Albany, 23 settembre 1930 – Beverly Hills, 10 giugno 2004) è stato un cantante e pianista statunitense, considerato uno dei pionieri della musica soul
+
+Perse completamente la vista all'età di sei anni, forse a causa di un glaucoma. Seppe coniugare sonorità diverse, dal rhythm and blues alla musica country, dal Vocal jazz al piano blues fino al soul blues. % NB lasciando una linea vuota tra un paragrafo e un'altro lascia un'indentazione. 
+
+\noindent Il brano Georgia on My Mind è stato il suo maggior successo. Nel 1990 partecipò, classificandosi al secondo posto, al Festival di Sanremo dove interpretò in coppia con Toto Cutugno la canzone Gli amori. Il suo ultimo contributo alla musica è stato la produzione di un disco di duetti con B.B. King, Elton John, Norah Jones e Johnny Mathis. The Genius - come era stato soprannominato per il suo grande talento artistico, nel 1980 apparve nel film The Blues Brothers.[3] Frank Sinatra lo chiamò "l'unico vero genio nel nostro campo"
+% noindent per togliere l'indentazione
+
+\section{Methods}
+\subsection{Study area}
+\subsection{Algorithm}
+% aggiungo una formula
+The first equation used was Equation \ref{eq:somma}:
+\begin{equation}
+    T = \sum p_i
+    \label{eq:somma}
+\end{equation}
+In this thesis we made use of
+Equation \ref{eq:newton}: % NB non si mettono mai numeri (es: Equation 1) nel testo così da non dover rinominare tutto
+% con \ref mi si collega direttamente alla label di rifeimento che mi interessa indicare. 
+
+% vado su LaTeX/Mathematics per avere sotto le possibilità di formule per latex
+\begin{equation}
+    F = \sqrt[3]{G \times \frac{m_1 \times m_2}{d^2}} % frac per fare la frazione 
+    % _ per mettere il pedice 
+    % ^ per mettere il quadrato
+    % funzione \times per metter il x moltiplicante 
+    % funzione \sqrt mettiamo tutto a caso sotto radice quadrato 
+    % modifica della struttura della radice, in [] 
+    \label{eq:newton} % con la lable metto un etichetta, alla quale inserisco un informazione che mi identifica la formula cui faccio riferimento 
+\end{equation}
+\section{Results}
+\section{Discussion}
+our resultrs... in section 
+\ref{sec:intro}
+\end{document}
 
