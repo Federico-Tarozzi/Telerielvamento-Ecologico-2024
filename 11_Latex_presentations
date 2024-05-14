@@ -1,0 +1,88 @@
+\documentclass{beamer}
+\usepackage{graphicx} % Required for inserting images
+
+\usetheme{Frankfurt} % bello è un modello che ti dice in alto quante slide mancano per finire. da inicazione sul punto della presentazione
+% \usetheme{Hannover}
+%\usecolortheme{crane}
+\usecolortheme{beaver}
+
+\title{Presentazione in LaTeX}
+\author{Federico Tarozzi}
+\date{May 2024}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+\begin{frame}{My first slide} %iniziare e titolare una slide
+    my first slide 
+\end{frame}
+
+%come fare gli elenchi puntati 
+\begin{frame}{Itemization}
+    \begin{itemize}
+        \item My first sentence
+        \item my second sentence
+        \item  my third sentence
+    \end{itemize}  
+\end{frame}
+
+%cambiare la dimensione testo in Latex
+%per ogni punteggio possiamo definire una funzione da tiny 6 a huge molto più grande
+
+
+\begin{frame}{Text dimension}
+    \scriptsize{Here I am inserting my text}
+    \huge{Here I am inserting my text}
+\end{frame}
+
+% ora come mettere le parole in grassetto 
+% o selezioniamo la parola e scriviamo Bold
+% oppure usiamo la funzione \textbf{}
+% o in corsivo \textit{}
+
+\section{Formulas}
+\begin{frame}{Formulas Used}
+In this thesis i made use of standard deviation as:
+
+\bigskip %per lasciare un po' di spazio
+    \begin{equation} %iniziare la formula con la formula della deviazione standard%
+        \delta =\sqrt{\frac{\sum_{i=1}^N (x - \mu)^2}{N}} %inserisco, radice, sommatoria, lettere greche, alla seconda  
+    \end{equation}
+%utilizzando \displaystyle mi permette di cambiare dove trovo il testo in riferimento al simbolo di sommatoria
+\end{frame}
+
+% volgio caricare un immagine andando a caricarla dai 3 puntini direttamente sulle impostazioni di Overleaf, in modo che esca direttamente il codice per inserire l0'immagine salvata nel mio pc. 
+\section{Results}
+\begin{frame}{Achived Results}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.9\linewidth] {Histogram_M3M2.png}
+        \caption{Gausssssss}
+        \label{fig:enter-label}
+    \end{figure}
+% sopra width, indica la grandezza dell'immagine rispetto al testo 
+\end{frame}
+
+% ora voglio mettere due immagini una vicino all'altra, copio e incollo Include grapghisc in modo da averne due
+
+\begin{frame}{robe}
+ \begin{figure}
+        \centering
+        \includegraphics[width=.4\linewidth]{Histogram_M3M2.png}
+        \includegraphics[width=.4\linewidth]{Histogram_M3M2.png} \\
+        \includegraphics[width=.4\linewidth]{Histogram_M3M2.png}
+        \includegraphics[width=.4\linewidth]{Histogram_M3M2.png} \\
+    \end{figure}
+    
+\end{frame}
+
+
+
+
+
+
+
+
+\end{document}
