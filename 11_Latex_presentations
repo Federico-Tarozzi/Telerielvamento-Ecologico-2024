@@ -14,6 +14,15 @@
 
 \maketitle
 
+% vado a inserire un sommario in modo che quando entriamo un una sezione mi mette il sommario 
+
+\AtBeginSection[] % Do nothing for \section*
+{
+\begin{frame}{Outline}
+\tableofcontents[currentsection]
+\end{frame}
+}
+
 \section{Introduction}
 \begin{frame}{My first slide} %iniziare e titolare una slide
     my first slide 
@@ -27,6 +36,31 @@
         \item  my third sentence
     \end{itemize}  
 \end{frame}
+
+
+\begin{frame}{per mettere i link}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.3\linewidth]{nir_green.png}
+    \caption{Enter Caption}
+    \label{fig:enter-label}
+\end{figure}
+
+in the project we made use of the R pagage imageRy
+\texttt{imageRy}
+    
+\end{frame}
+
+% andare a modificare inserendo una animazione che mi fa comparire pian piano le varie parti/item e non in blocco. NB le animazioni aumentano il numero delle slides, ma nel frankfurt vengono viste come una sola. 
+\begin{frame}{Itemization}
+    \begin{itemize}
+        \item My first sentence
+        \item \pause my second sentence
+        \item \pause my third sentence
+    \end{itemize}  
+\end{frame}
+
 
 %cambiare la dimensione testo in Latex
 %per ogni punteggio possiamo definire una funzione da tiny 6 a huge molto più grande
@@ -55,6 +89,7 @@ In this thesis i made use of standard deviation as:
 
 % volgio caricare un immagine andando a caricarla dai 3 puntini direttamente sulle impostazioni di Overleaf, in modo che esca direttamente il codice per inserire l0'immagine salvata nel mio pc. 
 \section{Results}
+
 \begin{frame}{Achived Results}
     \begin{figure}
         \centering
@@ -71,7 +106,7 @@ In this thesis i made use of standard deviation as:
  \begin{figure}
         \centering
         \includegraphics[width=.4\linewidth]{Histogram_M3M2.png}
-        \includegraphics[width=.4\linewidth]{Histogram_M3M2.png} \\
+        \pause\includegraphics[width=.4\linewidth]{Histogram_M3M2.png} \\
         \includegraphics[width=.4\linewidth]{Histogram_M3M2.png}
         \includegraphics[width=.4\linewidth]{Histogram_M3M2.png} \\
     \end{figure}
