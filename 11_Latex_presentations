@@ -1,4 +1,4 @@
-\documentclass{beamer}
+\documentclass{beamer} %per le presentazioni 
 \usepackage{graphicx} % Required for inserting images
 
 \usetheme{Frankfurt} % bello è un modello che ti dice in alto quante slide mancano per finire. da inicazione sul punto della presentazione
