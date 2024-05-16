@@ -24,7 +24,12 @@ Attention the course it's amazing
 
 
 > **External Link**
-[UNIBO] (https://www.unibo.it/it/studiare/dottorati-master-specializzazioni-e-altra-formazione/insegnamenti/insegnamento/2023/455369)
+[Alma Mater Studiorum University of Bolonga Website](https://www.unibo.it/it/studiare/dottorati-master-specializzazioni-e-altra-formazione/insegnamenti/insegnamento/2023/455369)
+
+# Main package used:
+```{r}
+library(imageRy)
+```
 
 
 
