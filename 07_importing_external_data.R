@@ -1,6 +1,6 @@
 # importing data from external sources 
 
-# usare libreria di rifeimento 
+# usare libreria di riferimento  
 library(terra)
 library(imageRy)
 
