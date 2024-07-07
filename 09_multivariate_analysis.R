@@ -13,9 +13,11 @@ b3 <- im.import("sentinel.dolomites.b3.tif") # green
 b4 <- im.import("sentinel.dolomites.b4.tif") # red
 b8 <- im.import("sentinel.dolomites.b8.tif") # nir 
 
+# faccio uno stack 
 sentdo <- c(b2, b3, b4, b8)
 sentdo
 
+# olotto le immagini 
 im.plotRGB(sentdo, r=4, g=3, b=2)
 im.plotRGB(sentdo, r=3, g=4, b=2)
 
@@ -36,6 +38,7 @@ tot <- sum(1570.12141,  605.95765,   55.87939,   30.32994) # somma dei vari rang
 55.87939*100/tot
 # correlazione tra i principal components e le bande, es: PC1 è maggiormente correlata al rosso e al nir ( 58% e 53%)
 
+# vado a plottare le immagini risultanti attraverso l'uso di colorblind friendly palette
 plot(pcimage, col=viridis(100))
 plot(pcimage, col=plasma(100))
 plot(pcimage, col=magma(100))
@@ -44,7 +47,7 @@ plot(pcimage, col=magma(100))
 # PC2 spiega il 30% circa
 # PC3 spiega ancora meno...
 
-# con la funzione focal possaimo andare a caloclare auqlsiasi componente basandoci su un unico elemento
+# con la funzione focal possaimo andare a collocare qualsiasi componente basandoci su un unico elemento
 # da portare un sistema da diverse bande a una banda sola ovvero quella della analisi multivariata. 
 
 # da un sistema quadridimensionale a uno monodimensionale contenuto dalla PC1 
