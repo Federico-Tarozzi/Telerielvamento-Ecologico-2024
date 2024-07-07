@@ -7,9 +7,11 @@ library(terra)
 install.packages("viridis")
 library(viridis)
 
-
+# richaimo la lista di dati e importo l'immagine sentinel 
 im.list()
 sent <- im.import("sentinel.png")
+
+# plotto l'immagine
 im.plotRGB(sent, r=1, g=2, b=3) # suolo nudo è diventato celeste e vegetazione è rossa
 
 # nir è banda 1 perchè abbiamo visto che riflette la vegetazione
