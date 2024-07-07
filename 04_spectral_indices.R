@@ -1,5 +1,6 @@
 # SPECTRAL INDICES
 
+# carico i pacchetti 
 library(terra)
 library(imageRy)
 
@@ -90,11 +91,14 @@ ndvi1992 = dvi1992 / (m1992[[1]] + m1992[[2]])
 ndvi2006 = dvi2006 / (m2006[[1]] + m2006[[2]])
 
 dev.off()
+
+# faccio un par per mostrare affiancati i risultati ottenuti 
 par(mfrow=c(1,2))
 plot(ndvi1992, col=cl)
 plot(ndvi2006, col=cl)
 
-# speediing up calculation
+
+# velocizzare il calcolo. 
 #funzione di imaginaRy--> ti permette di fare questo calcolo automatizzando l'NDVI, nome dell'immagine e le bande che rappresentano "nir" e "red"
 ndvi2006a <- im.ndvi(m2006, 1, 2)
 plot(ndvi2006a, col=cl)
