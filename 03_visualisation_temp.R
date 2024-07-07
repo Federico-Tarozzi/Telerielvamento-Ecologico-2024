@@ -1,30 +1,22 @@
 # Satellite data visualization in R by imageRy
 
-# richaimo i pacchetti che mi interessano, in questo caso library(imageRy) e library(terra)
+# richiamo i pacchetti che mi interessano, in questo caso library(imageRy) e library(terra)
 
 library(imageRy)
 library(terra)
 
+
 # List of data avaiable in imageRy
+# uso la funzione interna al pacchetto imageRy per richiamare una lista di dati integrati dentro il pacchetto
+
 im.list()
 
-# Import data
-im.import("matogrosso_ast_2006209_lrg.jpg")
 
+# Importo i dati attraverso la funzione im.import()
 # associo la funzione a una variabile che chiamo "mato"
 mato<-im.import("matogrosso_ast_2006209_lrg.jpg")
 
-
-
-
-library(imageRy)
-library(terra)
-# in case you have not terra
-# install.packages("terra")
-
-# list the data
-im.list()
-
+# importo la banda2 
 b2 <- im.import("sentinel.dolomites.b2.tif") 
 
 cl <- colorRampPalette(c("black", "grey", "light grey")) (100)
